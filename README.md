@@ -45,7 +45,7 @@ El objetivo principal es verificar el **flujo completo de usuario**, incluyendo:
 - datos/productos.json -> se encuentra 3 productos en formato json. seleccionados de  la web SAUCE DEMO
 ## Como correr las pruebas:
 - Clonar repositorio:
-git clone https://github.com/JoaTesterQA/PreEntrega---Joaquin-Moreira.git
+git clone https://github.com/JoaTesterQA/ProyectoFinal-Joaquin-Moreira.git
 - instalar dependencias:
 pip install -r requirements.txt
 - Nos dirigimos al archivo run_test.py y lo corremos desde el run python.
