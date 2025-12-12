@@ -7,13 +7,16 @@ from datetime import datetime
 
 @pytest.fixture
 def driver():
-    chrome_options = Options()
-    chrome_options.add_argument("--incognito")
-
+    options = Options()
+    options.add_argument("--incognito")
+    options.add_argument("--no-sandbox") # github
+    options.add_argument("--disable-gpu") # github
+    options.add_argument("--window-size=1920,1080") # github
+    options.add_argument("--headless=new") # github
     prefs = {"profile.default_content_setting_values.notifications": 2}
-    chrome_options.add_experimental_option("prefs", prefs)
+    options.add_experimental_option("prefs", prefs)
 
-    driver = webdriver.Chrome(options=chrome_options)
+    driver = webdriver.Chrome(options=options)
     driver.get("https://www.saucedemo.com/")
 
     yield driver
